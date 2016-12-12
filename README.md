@@ -31,3 +31,45 @@
 此后，每次本地提交后，只要有必要，就可以使用命令`git push origin master`推送最新修改；
 
 要克隆一个仓库，首先必须知道仓库的地址，然后使用`git clone`命令克隆。
+
+```
+git checkout -b "分支名"
+```
+
+`git checkout`命令加上`-b`参数表示创建并切换，相当于以下两条命令：
+
+```
+$ git branch dev
+$ git checkout dev
+Switched to branch 'dev'
+```
+
+`git branch`命令查看当前分支
+
+```
+$ git checkout master //git checkout + 分知名切换分支
+```
+
+`git merge dev`命令用于合并指定分支到当前分支(合并dev分支到master分支)。
+
+`git branch -d dev` 删除分支'dev'
+
+查看分支：`git branch`
+
+创建分支：`git branch <name>`
+
+切换分支：`git checkout <name>`
+
+创建+切换分支：`git checkout -b <name>`
+
+合并某分支到当前分支：`git merge <name>`
+
+删除分支：`git branch -d <name>`
+
+用`git log --graph`命令可以看到分支合并图
+
+```
+$ git merge --no-ff -m "merge with no-ff" dev
+```
+
+合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而`fast forward`合并就看不出来曾经做过合并。
