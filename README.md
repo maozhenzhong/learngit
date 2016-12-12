@@ -46,6 +46,10 @@ Switched to branch 'dev'
 
 `git branch`命令查看当前分支
 
+`git push origin dev` //提交该分支到远程仓库
+
+`git pull origin dev` //测试从远程获取dev
+
 ```
 $ git checkout master //git checkout + 分知名切换分支
 ```
@@ -73,3 +77,14 @@ $ git merge --no-ff -m "merge with no-ff" dev
 ```
 
 合并分支时，加上`--no-ff`参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而`fast forward`合并就看不出来曾经做过合并。
+
+修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+
+当手头工作没有完成时，先把工作现场`git stash`一下，然后去修复bug，修复后，再`git stash pop`，回到工作现场。
+
+
+
+
+
+
+
