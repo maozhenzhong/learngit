@@ -82,6 +82,9 @@ $ git merge --no-ff -m "merge with no-ff" dev
 
 当手头工作没有完成时，先把工作现场`git stash`一下，然后去修复bug，修复后，再`git stash pop`，回到工作现场。
 
+```
+$ssh-keygen -t rsa -b 4096 -C "your_email@example.com"   //生成本地公钥
+```
 
 
 
